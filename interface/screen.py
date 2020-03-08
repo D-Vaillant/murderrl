@@ -6,17 +6,19 @@ grid of characters, equivalent to the width and height of the current display.
 
 import textwrap
 
+from builtins import range
 from library import shape, coord, viewport
 
 class Grid (object):
+    """ A grid is just a list of lists with some helper methods. """
     _grid = None
+
     def __init__ (self, width=0, height=0):
         self._grid = []
 
-        for row in xrange(height):
-            row = []
-            for column in xrange(width):
-                row.append(None)
+        # This isn't clever but it's imminently readable.
+        for row in range(height):
+            row = [None]*width
             self._grid.append(row)
 
     def at (self, c, x=None):

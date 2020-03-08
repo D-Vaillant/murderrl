@@ -39,6 +39,7 @@ class Command (object):
         """
         return "%s%s: %s\n" % (self.key, self.key_suffix, self.description)
 
+    # TODO: This seems unnecessary; just run Command().action().
     def execute_command (self):
         self.action()
 

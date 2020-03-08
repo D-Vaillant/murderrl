@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+from builtins import range
+
 class CoordError (Exception): pass
 
 class RectangleIterator (object):
@@ -22,8 +24,8 @@ class RectangleIterator (object):
 
         assert self.stop_point >= self.start_point
     def __iter__ (self):
-        for x in xrange(self.start_point.x, self.stop_point.x):
-            for y in xrange(self.start_point.y, self.stop_point.y):
+        for x in range(self.start_point.x, self.stop_point.x):
+            for y in range(self.start_point.y, self.stop_point.y):
                 yield Coord(x, y)
     def __repr__ (self):
         return "<RectangleIterator: %s to %s>" % (self.start_point, self.stop_point)

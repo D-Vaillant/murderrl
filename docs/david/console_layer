@@ -1,0 +1,25 @@
+Console layer is the fundamental thing: it's where things get printed on. This is a running description of what's going on, as far as I can tell.
+
+A lot of this is happening in `interface` obviously but it also relies on some stuff in `library`.
+
+interface
+    screen.py
+
+Grid: Matrix with some helper methods.
+    init: takes height, width. outer list is height, inner lists are width.
+    at: ?
+    get: ?
+
+library
+    coord.py
+
+CoordError: homespun baby
+
+RectangleIterator
+    Abstraction.
+
+AdjacencyIterator
+    Extends rectangle iterator.
+
+Coord
+
